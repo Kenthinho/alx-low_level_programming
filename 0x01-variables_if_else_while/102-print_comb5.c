@@ -7,6 +7,7 @@
 
 int main(void)
 {
+
 int num1, num2;
 
 for (num1 = 0; num1 <= 98; num1++)
@@ -20,9 +21,8 @@ for (num1 = 0; num1 <= 98; num1++)
 		putchar((num2 % 10) + '0');
 
 		if (num1 == 98 && num2 == 99)
-		{
 	        	continue;
-		}
+		
 		putchar(',');
 		putchar(' ');
 	}
