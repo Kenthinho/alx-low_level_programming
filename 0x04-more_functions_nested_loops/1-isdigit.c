@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * main - checks the variable c if digit
- * returns 1 if true otherwise 0
- * Return: Always 0
- */
+* main - checks the variable c if digit
+* returns 1 if true otherwise 0
+* Return: Always 0
+*/
 
 int _isdigit(int c)
 {
