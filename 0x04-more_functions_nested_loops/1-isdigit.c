@@ -2,9 +2,9 @@
 #include "main.h"
 
 /**
-* main - checks the variable c if digit
-* returns 1 if true otherwise 0
-* Return: Always 0
+* _isdigit - checks if a variable is a digit
+* @c: the variable to be checked
+* Return: returns 1 if the variable is a digit and zero otherwise
 */
 
 int _isdigit(int c)
