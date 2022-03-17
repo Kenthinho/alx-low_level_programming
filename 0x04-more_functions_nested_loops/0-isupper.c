@@ -1,11 +1,11 @@
-#include "main.h"
 #include <ctype.h>
+#include "main.h"
 
 /**
- * main - checks the argument for uppercase
- * @c: Returns 1 if in uppercase else otherwise 0
- * Return: Always 0(Success)
- */
+* _isupper - checks if a character is uppercase
+* @c: the variable to be checked
+* Return: returns 1 if the variable is uppercase and zero otherwise
+*/
 
 int _isupper(int c)
 {
