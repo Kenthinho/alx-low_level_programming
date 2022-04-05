@@ -1,4 +1,4 @@
-#include <sstdlib.h>
+#include <stdlib.h>
 
 /**
  * _strdup - copy
