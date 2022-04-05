@@ -29,7 +29,7 @@ return (0);
 if (value % 25 >= 0)
 {
 c += value / 25;
-value = value % 25
+value = value % 25;
 }
 if (value % 10 >= 0)
 {
