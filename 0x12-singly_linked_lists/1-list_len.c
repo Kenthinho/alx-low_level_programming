@@ -8,7 +8,6 @@
  * @h: pointer to the struct list_t
  * Return: size_t
  */
-
 size_t list_len(const list_t *h)
 {
 	size_t count;
