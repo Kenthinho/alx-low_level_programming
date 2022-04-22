@@ -62,7 +62,7 @@ int _strlen(const char *s)
  * Return: address of the newly allocated memory
  */
 
-char *_strdop(const char *str)
+char *_strdup(const char *str)
 {
 	unsigned int len;
 	unsigned int i, j;
