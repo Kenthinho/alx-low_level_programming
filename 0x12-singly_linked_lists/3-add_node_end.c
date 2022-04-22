@@ -46,7 +46,7 @@ list_t *add_node_end(list_t **head, const char *str)
 int _strlen(const char *s)
 {
 	int i = 0;
-	
+
 	while (*s != '\0')
 	{
 		i++;
@@ -56,7 +56,7 @@ int _strlen(const char *s)
 }
 
 /**
- * _strdup - function that returns a pointer to a newly allocated space 
+ * _strdup - function that returns a pointer to a newly allocated space
  * in memory, which contains a copy of the string given as a parameter
  * @str: string of chars
  * Return: address of the newly allocated memory
