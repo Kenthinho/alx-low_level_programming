@@ -10,29 +10,33 @@ listint_t *find_listint_loop_h(listint_t *head);
 
 size_t free_listint_safe(listint_t **h)
 {
-listint_t *current = *h, *loopNode = find_listint_loop_h(*h);
-size_t nodeCount = 0;
-int loop = 1;
-if (!h || !(*h))
-return (0);
-for (nodeCount = (*h != loopNode || loop) && *h != NULL; *h = current)
-{
-nodeCount++;
-current = (*h)->next;
-if (*h == loopNode && loop)
-{
-if (loopNode == loopNode->next)
-{
-free(*h);
-break;
-}
-nodeCount++;
-current = current->next;
-free((*h)->next);
-loop = 0;
-}
-free(*h);
-}
-*h = NULL;
-return (nodeCount);
+	listint_t *current;
+	listint_t *next;
+	int diff;
+
+	register short count = 0;
+
+	if (!h || !(*h))
+		return (count);
+	current = *h;
+	while (current)
+	{
+		diff = current - current->next;
+		if (diff > 0)
+		{
+			next = current->next;
+			free(current);
+			current = next;
+			count++;
+		}
+		else
+		{
+			free(current);
+			*h = NULL;
+			count++;
+			break;
+		}
+	}
+	*h = NULL;
+	return (count);
 }
