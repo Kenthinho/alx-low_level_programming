@@ -36,7 +36,7 @@ exit(99);
 }
 if (r < 0)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg[1]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
 a = close(fd_r);
@@ -46,7 +46,7 @@ if (a < 0 || b < 0)
 if (a < 0)
 dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_r);
 if (b < 0)
-dprint(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
 exit(100);
 }
 return (0);
