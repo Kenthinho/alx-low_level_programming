@@ -9,24 +9,28 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fd;
-ssize_t num_of_letters, ftable;
-char *buff;
-if (!filename)
-return (0);
-fd = open(filename, O_RDONLY);
-if (fd == -1)
-return (0);
-buff = malloc(letters);
-if (!buff)
-return (0);
-ftable = read(fd, buff, letters);
-if (ftable == -1)
-return (0);
-num_of_letters = write(STDOUT_FILENO, buff, ftable);
-if (num_of_letters == -1 || ftable != num_of_letters)
-return (0);
-free(buff);
-close(fd);
-return (num_of_letters);
+	int fd;
+	int s, t;
+	char *buf;
+
+	if (!filename)
+		return (0);
+
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
+		return (0);
+
+	buf = malloc(sizeof(char) * letters);
+	if (!buf)
+		return (0);
+
+	s = read(fd, buf, letters);
+	if (s < 0)
+	{
+		free(buf);
+		return (0);
+	}
+
+	free(buf);
+	return (t);
 }
